@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import { Sprout, TrendingUp, Calendar, Droplet, Sun, ArrowLeft } from "lucide-react";
+import { Sprout, TrendingUp, Calendar, Droplet, Sun, ArrowLeft, ScanLine } from "lucide-react";
 import BottomNav from "@/react-app/components/BottomNav";
 import type { FarmerData } from "@/react-app/pages/FarmerInfo";
 
@@ -98,6 +98,28 @@ export default function MyCrops({ farmerData, language }: MyCropsProps) {
               />
             </div>
           </div>
+        </div>
+
+        {/* Scan Crop — entry point to ImageCapture */}
+        <div className="bg-white rounded-lg shadow-sm p-4 mb-4 border border-emerald-200">
+          <div className="flex items-center gap-3 mb-3">
+            <ScanLine className="w-6 h-6 text-emerald-600" />
+            <h3 className="text-lg font-bold text-gray-900">
+              {language === 'en' ? 'Scan Your Crop' : 'फसल स्कैन करें'}
+            </h3>
+          </div>
+          <p className="text-sm text-gray-600 mb-3">
+            {language === 'en'
+              ? 'Take a photo to detect diseases, weeds, or analyse soil'
+              : 'रोग, खरपतवार पहचान या मिट्टी विश्लेषण के लिए फोटो लें'}
+          </p>
+          <button
+            onClick={() => navigate('/capture')}
+            className="w-full bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg px-4 py-3 font-bold text-sm flex items-center justify-center gap-2 transition-colors"
+          >
+            <ScanLine className="w-4 h-4" />
+            {language === 'en' ? 'Start Analysis' : 'विश्लेषण शुरू करें'}
+          </button>
         </div>
 
         {/* Watering Info */}
