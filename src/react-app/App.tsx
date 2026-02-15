@@ -7,6 +7,15 @@ import MyCrops from "@/react-app/pages/MyCrops";
 import Weather from "@/react-app/pages/Weather";
 import Profile from "@/react-app/pages/Profile";
 import ImageCapture from "@/react-app/pages/ImageCapture";
+import MandiPrices from "@/react-app/pages/Mandiprices";
+import Schemes from "@/react-app/pages/Schemes";
+import CropCalendar from "@/react-app/pages/Cropcalender";
+import AIChat from "@/react-app/pages/AIchat";
+import Notifications from "@/react-app/pages/Notifications";
+import HelpSupport from "@/react-app/pages/Helpsupport";
+import Privacy from "@/react-app/pages/Privacy";
+import Terms from "@/react-app/pages/Terms";
+import Help from "@/react-app/pages/Help";
 
 export default function App() {
   const [language, setLanguage] = useState<'en' | 'hi'>('en');
@@ -35,63 +44,63 @@ export default function App() {
         </div>
 
         <Routes>
-          <Route 
-            path="/" 
+          <Route
+            path="/"
             element={
               farmerData ? (
                 <Navigate to="/dashboard" replace />
               ) : (
-                <FarmerInfo 
-                  onComplete={handleFarmerInfoComplete} 
+                <FarmerInfo
+                  onComplete={handleFarmerInfoComplete}
                   language={language}
                 />
               )
-            } 
+            }
           />
-          <Route 
-            path="/dashboard" 
+          <Route
+            path="/dashboard"
             element={
               farmerData ? (
-                <HomePage 
+                <HomePage
                   farmerData={farmerData}
                   language={language}
                 />
               ) : (
                 <Navigate to="/" replace />
               )
-            } 
+            }
           />
-          <Route 
-            path="/crops" 
+          <Route
+            path="/crops"
             element={
               farmerData ? (
-                <MyCrops 
+                <MyCrops
                   farmerData={farmerData}
                   language={language}
                 />
               ) : (
                 <Navigate to="/" replace />
               )
-            } 
+            }
           />
-          <Route 
-            path="/weather" 
+          <Route
+            path="/weather"
             element={
               farmerData ? (
-                <Weather 
+                <Weather
                   farmerData={farmerData}
                   language={language}
                 />
               ) : (
                 <Navigate to="/" replace />
               )
-            } 
+            }
           />
-          <Route 
-            path="/profile" 
+          <Route
+            path="/profile"
             element={
               farmerData ? (
-                <Profile 
+                <Profile
                   farmerData={farmerData}
                   language={language}
                   onLanguageToggle={toggleLanguage}
@@ -99,21 +108,102 @@ export default function App() {
               ) : (
                 <Navigate to="/" replace />
               )
-            } 
+            }
           />
-          <Route 
-            path="/capture/:type" 
+          <Route
+            path="/notifications"
             element={
               farmerData ? (
-                <ImageCapture 
+                <Notifications
                   farmerData={farmerData}
                   language={language}
-                  analysisType="disease"
                 />
               ) : (
                 <Navigate to="/" replace />
               )
-            } 
+            }
+          />
+          <Route
+            path="/help-support"
+            element={
+              farmerData ? (
+                <HelpSupport
+                  farmerData={farmerData}
+                  language={language}
+                />
+              ) : (
+                <Navigate to="/" replace />
+              )
+            }
+          />
+          {/* Privacy Policy Page */}
+          <Route
+            path="/privacy"
+            element={<Privacy language={language} />}
+          />
+          {/* Terms & Conditions Page */}
+          <Route
+            path="/terms"
+            element={<Terms language={language} />}
+          />
+          {/* Help Page */}
+          <Route
+            path="/help"
+            element={<Help language={language} />}
+          />
+          {/* /capture — no :type param needed; ImageCapture manages type internally */}
+          <Route
+            path="/capture"
+            element={
+              farmerData ? (
+                <ImageCapture
+                  farmerData={farmerData}
+                  language={language}
+                />
+              ) : (
+                <Navigate to="/" replace />
+              )
+            }
+          />
+          <Route
+            path="/mandi"
+            element={
+              farmerData ? (
+                <MandiPrices farmerData={farmerData} language={language} />
+              ) : (
+                <Navigate to="/" replace />
+              )
+            }
+          />
+          <Route
+            path="/schemes"
+            element={
+              farmerData ? (
+                <Schemes farmerData={farmerData} language={language} />
+              ) : (
+                <Navigate to="/" replace />
+              )
+            }
+          />
+          <Route
+            path="/calendar"
+            element={
+              farmerData ? (
+                <CropCalendar farmerData={farmerData} language={language} />
+              ) : (
+                <Navigate to="/" replace />
+              )
+            }
+          />
+          <Route
+            path="/chat"
+            element={
+              farmerData ? (
+                <AIChat farmerData={farmerData} language={language} />
+              ) : (
+                <Navigate to="/" replace />
+              )
+            }
           />
         </Routes>
       </div>
