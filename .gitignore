@@ -1,0 +1,14 @@
+# Virtual environments
+venv/
+soil_type_image_model/venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Models
+*.keras
+Models/
+
+# Data
+Data/
