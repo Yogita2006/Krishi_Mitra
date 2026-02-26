@@ -43,7 +43,7 @@ The project was built as a full-stack solution: a modern React + TypeScript fron
 
 **Crop Yield Prediction Page**
 
-![Crop Yield Prediction](./docs/screenshots/crop-yield.png)
+<img width="478" height="995" alt="image" src="https://github.com/user-attachments/assets/4b5bb272-3b89-4cb4-a7bb-c03583bfcdc4" />
 
 ---
 
