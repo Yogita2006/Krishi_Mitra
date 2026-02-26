@@ -47,15 +47,15 @@ The project was built as a full-stack solution: a modern React + TypeScript fron
 
 ---
 
-**Soil Type Classification Page**
+**Weather Monitoring**
 
-![Soil Type Classification](./docs/screenshots/soil-type.png)
+<img width="458" height="995" alt="image" src="https://github.com/user-attachments/assets/fd19bb13-40cf-4ea9-a5db-deb03382a081" />
 
 ---
 
-**Results / Output View**
+**Profile**
 
-![Results View](./docs/screenshots/results.png)
+<img width="451" height="999" alt="image" src="https://github.com/user-attachments/assets/31d89db0-5007-4fae-92cf-03f23041db84" />
 
 ---
 
