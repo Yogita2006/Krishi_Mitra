@@ -35,8 +35,6 @@ The project was built as a full-stack solution: a modern React + TypeScript fron
 
 ## Screenshots
 
-> Add screenshots of your application below. Replace each placeholder with the actual image path or URL once available.
-
 **Home / Landing Page**
 
 ![Home Page](./docs/screenshots/home.png)
