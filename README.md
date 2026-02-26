@@ -289,12 +289,4 @@ This project is open source. Please refer to the repository for license details,
 
 ---
 
-## Contributors
-
-Krishi Mitra was built and is maintained by the following contributors:
-
-- [Yogita2006](https://github.com/Yogita2006)
-
----
-
 > Empowering farmers with technology for a better harvest.
