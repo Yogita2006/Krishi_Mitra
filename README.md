@@ -37,7 +37,7 @@ The project was built as a full-stack solution: a modern React + TypeScript fron
 
 **Home / Landing Page**
 
-![Home Page](./docs/screenshots/home.png)
+<img width="759" height="998" alt="image" src="https://github.com/user-attachments/assets/1486da02-5064-4347-a271-2db31be60f83" />
 
 ---
 
